@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[kmp算法]]></title>
+    <url>%2F2019%2F10%2F21%2Falgorithm%2Fkmp%2F</url>
+    <content type="text"><![CDATA[假如我们从字符串S中匹配一个子串T。 很容易想到的就是2层循环，挨个比对。代码示例如下：123456789101112131415public static Integer match(String S, String T) &#123; for (int i = 0; i &lt; (S.length() - T.length() + 1); i++) &#123; int index = i; for (int j = 0; j &lt; T.length(); j++, index++) &#123; if (S.charAt(index) != T.charAt(j)) &#123; break; &#125; &#125; if (index == (i + T.length())) &#123; return i; &#125; &#125; return null;&#125; 若S的长度为m， T的长度为n, 显而易见，时间复杂度为O(m*n);那有没有更加效率的算法。随后国外的三位大佬就开创了一种字符串匹配算法即KMP算法。 设S=”ABCABYABCABBCABCABX”, T=”ABCABX”。如图所示:]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[求大于某个数的最小2次幂]]></title>
     <url>%2F2019%2F08%2F29%2Fjava%2F%E6%B1%82%E5%A4%A7%E4%BA%8E%E6%9F%90%E4%B8%AA%E6%95%B0%E7%9A%84%E6%9C%80%E5%B0%8F2%E6%AC%A1%E5%B9%82%2F</url>
     <content type="text"><![CDATA[今天闲来功夫看了下ArrayDequ的源码。 发现有个计算数组初始化容量的方法设计特别巧妙。如下:123456789101112131415161718private static int calculateSize(int numElements) &#123; int initialCapacity = MIN_INITIAL_CAPACITY; // Find the best power of two to hold elements. // Tests &quot;&lt;=&quot; because arrays aren&apos;t kept full. if (numElements &gt;= initialCapacity) &#123; initialCapacity = numElements; initialCapacity |= (initialCapacity &gt;&gt;&gt; 1); initialCapacity |= (initialCapacity &gt;&gt;&gt; 2); initialCapacity |= (initialCapacity &gt;&gt;&gt; 4); initialCapacity |= (initialCapacity &gt;&gt;&gt; 8); initialCapacity |= (initialCapacity &gt;&gt;&gt; 16); initialCapacity++; if (initialCapacity &lt; 0) // Too many elements, must back off initialCapacity &gt;&gt;&gt;= 1;// Good luck allocating 2 ^ 30 elements &#125; return initialCapacity;&#125; 假如给定数字17， 我们现在要求大于17的最小2次幂数。 该怎么求呢？17的二进制为:(以8位为例)100010001 则将上述2进制变换成如下图 然后转换成10进制或者 转换成10进制后加1进位。 文章开头所说的算法则就是采用第二种思路。 通过移位和位或运算，将低位0全部转换为1。 然后再加上1。 ps：因为java中 int类型的是32位, 故需要移位(1 + 2 + 4 + 8 + 16)。]]></content>
