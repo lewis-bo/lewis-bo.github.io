@@ -88,8 +88,7 @@
 <meta property="og:description" content="假如我们从字符串S中匹配一个子串T(模式串)。 很容易想到的就是2层循环，挨个比对。代码示例如下：123456789101112131415public static Integer match(String S, String T) &amp;#123;    for (int i = 0; i &amp;lt; (S.length() - T.length() + 1); i++) &amp;#123;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://note4u-hexo-image.oss-cn-beijing.aliyuncs.com/images/1571638822780.jpg">
-<meta property="og:image" content="https://blog.csdn.net/qq_37969433/article/details/82947411">
-<meta property="og:updated_time" content="2019-10-24T07:25:35.000Z">
+<meta property="og:updated_time" content="2019-10-24T07:27:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="kmp算法">
 <meta name="twitter:description" content="假如我们从字符串S中匹配一个子串T(模式串)。 很容易想到的就是2层循环，挨个比对。代码示例如下：123456789101112131415public static Integer match(String S, String T) &amp;#123;    for (int i = 0; i &amp;lt; (S.length() - T.length() + 1); i++) &amp;#123;">
@@ -382,7 +381,7 @@
 <p>如下：<br>   next:000123112<br>nextval:000003100</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public static int[] nextval(String regex) &#123;</span><br><span class="line">    int[] nextval = new int[regex.length()];</span><br><span class="line">    nextval[0] = 0;</span><br><span class="line">    nextval[1] = 0;</span><br><span class="line">    for (int i = 2; i &lt; regex.length(); i++) &#123;</span><br><span class="line">        int max = 0;</span><br><span class="line">        int index = 1;</span><br><span class="line">        while (index &lt; i) &#123;</span><br><span class="line">            if (regex.substring(0, index).equals(regex.substring( i - index, i))) &#123;</span><br><span class="line">                max = index;</span><br><span class="line">            &#125;</span><br><span class="line">            index ++;</span><br><span class="line">        &#125;</span><br><span class="line">        nextval[i] = max;</span><br><span class="line">        if (regex.charAt(max) == regex.charAt(i)) &#123;</span><br><span class="line">            nextval[i] = nextval[max];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return nextval;</span><br></pre></td></tr></table></figure>
 <p>匹配方法可直接把next方法改成nextval方法即可。</p>
-<p><img src="https://blog.csdn.net/qq_37969433/article/details/82947411" alt="参考博客"></p>
+<p><a href="https://blog.csdn.net/qq_37969433/article/details/82947411" target="_blank" rel="noopener">参考博客</a></p>
 
       
     </div>
