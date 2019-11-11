@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="纯加深记忆贴:首先http是一次请求，一次响应。 一般都是server端处理完请求，主动关闭连接。 1.http requestrequest的结构&amp;lt;请求行&amp;gt;&amp;lt;请求头&amp;gt;&amp;lt;请求体&amp;gt;">
+<meta name="description" content="纯加深记忆贴:首先http是一次请求，一次响应。 一般都是server端处理完请求，主动关闭连接。 1.http requestrequest的结构&amp;lt;请求行&amp;gt;&amp;lt;请求头&amp;gt;&amp;lt;请求体&amp;gt;具体结构如下:123+ 第一行     &amp;lt;请求方法&amp;gt;(POST、GET、PUT、DELETE) &amp;lt;URL&amp;gt; &amp;lt;协议/版本&amp;gt;+ 第二行     &amp;lt">
 <meta name="keywords" content="http,java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="http-数据提交方式">
 <meta property="og:url" content="http://www.note4u.cn/2019/11/11/http/http-数据提交方式/index.html">
 <meta property="og:site_name" content="好记性不如烂笔头">
-<meta property="og:description" content="纯加深记忆贴:首先http是一次请求，一次响应。 一般都是server端处理完请求，主动关闭连接。 1.http requestrequest的结构&amp;lt;请求行&amp;gt;&amp;lt;请求头&amp;gt;&amp;lt;请求体&amp;gt;">
+<meta property="og:description" content="纯加深记忆贴:首先http是一次请求，一次响应。 一般都是server端处理完请求，主动关闭连接。 1.http requestrequest的结构&amp;lt;请求行&amp;gt;&amp;lt;请求头&amp;gt;&amp;lt;请求体&amp;gt;具体结构如下:123+ 第一行     &amp;lt;请求方法&amp;gt;(POST、GET、PUT、DELETE) &amp;lt;URL&amp;gt; &amp;lt;协议/版本&amp;gt;+ 第二行     &amp;lt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-11T06:32:18.000Z">
+<meta property="og:updated_time" content="2019-11-11T07:31:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http-数据提交方式">
-<meta name="twitter:description" content="纯加深记忆贴:首先http是一次请求，一次响应。 一般都是server端处理完请求，主动关闭连接。 1.http requestrequest的结构&amp;lt;请求行&amp;gt;&amp;lt;请求头&amp;gt;&amp;lt;请求体&amp;gt;">
+<meta name="twitter:description" content="纯加深记忆贴:首先http是一次请求，一次响应。 一般都是server端处理完请求，主动关闭连接。 1.http requestrequest的结构&amp;lt;请求行&amp;gt;&amp;lt;请求头&amp;gt;&amp;lt;请求体&amp;gt;具体结构如下:123+ 第一行     &amp;lt;请求方法&amp;gt;(POST、GET、PUT、DELETE) &amp;lt;URL&amp;gt; &amp;lt;协议/版本&amp;gt;+ 第二行     &amp;lt">
 
 
 
@@ -326,7 +326,7 @@
 
       
         <h3 id="纯加深记忆贴"><a href="#纯加深记忆贴" class="headerlink" title="纯加深记忆贴:"></a>纯加深记忆贴:</h3><p>首先http是一次请求，一次响应。 一般都是server端处理完请求，主动关闭连接。</p>
-<h5 id="1-http-request"><a href="#1-http-request" class="headerlink" title="1.http request"></a>1.http request</h5><p>request的结构<br><code>&lt;请求行&gt;&lt;请求头&gt;&lt;请求体&gt;</code></p>
+<h5 id="1-http-request"><a href="#1-http-request" class="headerlink" title="1.http request"></a>1.http request</h5><p>request的结构<br><code>&lt;请求行&gt;&lt;请求头&gt;&lt;请求体&gt;</code><br>具体结构如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ 第一行     &lt;请求方法&gt;(POST、GET、PUT、DELETE) &lt;URL&gt; &lt;协议/版本&gt;</span><br><span class="line">+ 第二行     &lt;请求头&gt;(content-Type, content-length)</span><br><span class="line">+ 第三行     &lt;请求体&gt;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
