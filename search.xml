@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[http-数据提交方式]]></title>
     <url>%2F2019%2F11%2F11%2Fhttp%2Fhttp-%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BA%A4%E6%96%B9%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[纯加深记忆贴:首先http是一次请求，一次响应。 一般都是server端处理完请求，主动关闭连接。 1.http requestrequest的结构&lt;请求行&gt;&lt;请求头&gt;&lt;请求体&gt;具体结构如下:123+ 第一行 &lt;请求方法&gt;(POST、GET、PUT、DELETE) &lt;URL&gt; &lt;协议/版本&gt;+ 第二行 &lt;请求头&gt;(content-Type, content-length)+ 第三行 &lt;请求体&gt;]]></content>
+    <content type="text"><![CDATA[纯加深记忆贴:首先http是一次请求，一次响应。 一般都是server端处理完请求，主动关闭连接。 1.http requestrequest的结构&lt;请求行&gt;&lt;请求头&gt;&lt;请求体&gt;具体结构如下:123+ 第一行 &lt;请求方法&gt;(POST、GET、PUT、DELETE) &lt;URL&gt; &lt;协议/版本&gt;+ 第二行 &lt;请求头&gt;(content-Type, content-length等)+ 第三行 &lt;请求体&gt; 如下图所示: 2.http responserequest的结构&lt;响应行&gt;&lt;响应头&gt;&lt;响应体&gt;具体结构如下:123+ 第一行 &lt;协议/版本&gt;(HTTP/1.1) &lt;状态码&gt; &lt;状态描述&gt;+ 第二行 &lt;响应头&gt;(Allow、Cache-Control等)+ 第三行 &lt;响应体&gt; 如下图所示:]]></content>
       <tags>
         <tag>http</tag>
         <tag>java</tag>

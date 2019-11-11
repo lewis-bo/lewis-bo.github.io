@@ -87,10 +87,13 @@
 <meta property="og:site_name" content="好记性不如烂笔头">
 <meta property="og:description" content="纯加深记忆贴:首先http是一次请求，一次响应。 一般都是server端处理完请求，主动关闭连接。 1.http requestrequest的结构&amp;lt;请求行&amp;gt;&amp;lt;请求头&amp;gt;&amp;lt;请求体&amp;gt;具体结构如下:123+ 第一行     &amp;lt;请求方法&amp;gt;(POST、GET、PUT、DELETE) &amp;lt;URL&amp;gt; &amp;lt;协议/版本&amp;gt;+ 第二行     &amp;lt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-11T07:31:03.000Z">
+<meta property="og:image" content="https://note4u-hexo-image.oss-cn-beijing.aliyuncs.com/images/1573458634895.jpg">
+<meta property="og:image" content="https://note4u-hexo-image.oss-cn-beijing.aliyuncs.com/images/1573458651733.jpg">
+<meta property="og:updated_time" content="2019-11-11T07:56:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http-数据提交方式">
 <meta name="twitter:description" content="纯加深记忆贴:首先http是一次请求，一次响应。 一般都是server端处理完请求，主动关闭连接。 1.http requestrequest的结构&amp;lt;请求行&amp;gt;&amp;lt;请求头&amp;gt;&amp;lt;请求体&amp;gt;具体结构如下:123+ 第一行     &amp;lt;请求方法&amp;gt;(POST、GET、PUT、DELETE) &amp;lt;URL&amp;gt; &amp;lt;协议/版本&amp;gt;+ 第二行     &amp;lt">
+<meta name="twitter:image" content="https://note4u-hexo-image.oss-cn-beijing.aliyuncs.com/images/1573458634895.jpg">
 
 
 
@@ -326,7 +329,10 @@
 
       
         <h3 id="纯加深记忆贴"><a href="#纯加深记忆贴" class="headerlink" title="纯加深记忆贴:"></a>纯加深记忆贴:</h3><p>首先http是一次请求，一次响应。 一般都是server端处理完请求，主动关闭连接。</p>
-<h5 id="1-http-request"><a href="#1-http-request" class="headerlink" title="1.http request"></a>1.http request</h5><p>request的结构<br><code>&lt;请求行&gt;&lt;请求头&gt;&lt;请求体&gt;</code><br>具体结构如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ 第一行     &lt;请求方法&gt;(POST、GET、PUT、DELETE) &lt;URL&gt; &lt;协议/版本&gt;</span><br><span class="line">+ 第二行     &lt;请求头&gt;(content-Type, content-length)</span><br><span class="line">+ 第三行     &lt;请求体&gt;</span><br></pre></td></tr></table></figure></p>
+<h5 id="1-http-request"><a href="#1-http-request" class="headerlink" title="1.http request"></a>1.http request</h5><p>request的结构<br><code>&lt;请求行&gt;&lt;请求头&gt;&lt;请求体&gt;</code><br>具体结构如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ 第一行     &lt;请求方法&gt;(POST、GET、PUT、DELETE) &lt;URL&gt; &lt;协议/版本&gt;</span><br><span class="line">+ 第二行     &lt;请求头&gt;(content-Type, content-length等)</span><br><span class="line">+ 第三行     &lt;请求体&gt;</span><br></pre></td></tr></table></figure></p>
+<p>如下图所示:<br><img src="https://note4u-hexo-image.oss-cn-beijing.aliyuncs.com/images/1573458634895.jpg" alt></p>
+<h5 id="2-http-response"><a href="#2-http-response" class="headerlink" title="2.http response"></a>2.http response</h5><p>request的结构<br><code>&lt;响应行&gt;&lt;响应头&gt;&lt;响应体&gt;</code><br>具体结构如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ 第一行     &lt;协议/版本&gt;(HTTP/1.1) &lt;状态码&gt; &lt;状态描述&gt;</span><br><span class="line">+ 第二行     &lt;响应头&gt;(Allow、Cache-Control等)</span><br><span class="line">+ 第三行     &lt;响应体&gt;</span><br></pre></td></tr></table></figure></p>
+<p>如下图所示:<br><img src="https://note4u-hexo-image.oss-cn-beijing.aliyuncs.com/images/1573458651733.jpg" alt></p>
 
       
     </div>
@@ -504,7 +510,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#纯加深记忆贴"><span class="nav-number">1.</span> <span class="nav-text">纯加深记忆贴:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-http-request"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.http request</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#纯加深记忆贴"><span class="nav-number">1.</span> <span class="nav-text">纯加深记忆贴:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-http-request"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.http request</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-http-response"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.http response</span></a></li></ol></li></ol></div>
             
 
           </div>
