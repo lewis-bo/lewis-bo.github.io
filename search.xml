@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[scan获取redis实例的key]]></title>
+    <url>%2F2020%2F06%2F10%2Fscript%2Fshell%2Fscan%E8%8E%B7%E5%8F%96redis%E5%AE%9E%E4%BE%8B%E7%9A%84key%2F</url>
+    <content type="text"><![CDATA[12345678910111213141516171819202122232425262728293031323334353637383940#!/usr/bin/env bashlock_name=&quot;redis.tmp.lock&quot;if [[ -f &quot;$lock_name&quot; ]];then echo &quot;脚本已在运行中&quot; exitfi# 创建文件锁touch $lock_name# 清除历史keyecho &quot;&quot; &gt; ./all_tmp.txttotal=0cmd_path=&quot;/usr/local/redis-5.0.3/src/redis-cli&quot;port=6379hosts=(&apos;0.0.0.0 1.1.1.1 2.2.2.2)for host in $&#123;hosts[@]&#125; ; do echo &quot;开始获取主机[$host]对应的key&quot; cursor=0 is_begin=0 while [[ $cursor != 0 || is_begin == 0 ]]; do is_begin=1 result=`$cmd_path -h $host -p $port scan $&#123;cursor&#125; count 2000` #扫描结果写入临时表 echo $&#123;result&#125; &gt; ./tmp.txt echo $&#123;result&#125; &gt;&gt; ./all_tmp.txt #计算总量 # all_count=`awk &apos;&#123;print NF&#125;&apos; tmp.txt` # total=$[$&#123;total&#125;+$&#123;all_count&#125;-1] # echo &apos;当前数量&apos;$&#123;total&#125; #获取下一次的游标位置 cursor=`awk &apos;&#123;print $1&#125;&apos; tmp.txt` if [[ $cursor == 0 ]];then break fi donedone# 删除文件rm -rf $lock_name]]></content>
+      <categories>
+        <category>shell</category>
+      </categories>
+      <tags>
+        <tag>redis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ELK截取字符分组统计]]></title>
     <url>%2F2020%2F06%2F10%2Fes%2FELK%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E5%88%86%E7%BB%84%E7%BB%9F%E8%AE%A1%2F</url>
     <content type="text"><![CDATA[ELK查询的时候， 会对某个字段进行处理后比如截取后在进行分组统计，可以使用ES的painless脚本，示例如下:12345678910111213141516171819202122232425262728293031323334353637GET /xxxx/_search&#123; &quot;query&quot;: &#123; &quot;bool&quot;: &#123; &quot;filter&quot;: &#123; &quot;range&quot;: &#123; &quot;@timestamp&quot;: &#123; &quot;gte&quot;: &quot;2020-06-09T19:00:00.000Z&quot;, &quot;lte&quot;: &quot;2020-06-10T00:00:00.000Z&quot; &#125; &#125; &#125; &#125; &#125;, &quot;script_fields&quot;: &#123; &quot;request_uri&quot;: &#123; &quot;script&quot;: &#123; &quot;source&quot;: &quot;&quot;&quot; def request_uri = doc[&apos;request_uri&apos;].value; int beginIndex = request_uri.indexOf(&quot;?&quot;); if (beginIndex &lt; 0) &#123; return request_uri; &#125; return request_uri.substring(0, beginIndex); &quot;&quot;&quot; &#125; &#125; &#125;, &quot;aggs&quot;: &#123; &quot;agg_request_uri&quot;: &#123; &quot;terms&quot;: &#123; &quot;field&quot;: &quot;request_uri&quot;, &quot;size&quot;: 20 &#125; &#125; &#125;&#125;]]></content>
